@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Olá, Luiz Carlos</ion-title>       
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> 
+  <div id="container">
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col>          
+          <ion-button style="padding-top: 10px; padding-left: 10px;" color="dark">
+            Pagamento
+          </ion-button>       
+        </ion-col>  
+        <ion-col>
+          <ion-button shape="circle">
+            <ion-icon slot="icon-only" name="grid-outline"></ion-icon>                   
+          </ion-button>
+          <ion-button shape="circle">
+            <ion-icon slot="icon-only" name="share-social-outline"></ion-icon>                   
+          </ion-button>
+          <ion-button shape="circle">
+            <ion-icon slot="icon-only" name="cart"></ion-icon>       
+            <ion-badge color="danger">2</ion-badge>
+          </ion-button>
+        </ion-col>      
+        
+      </ion-row>
+      <ion-row>        
+        <ion-col>    
+
+          <ion-card color="secondary">
+            <ion-card-header>
+             <b> Compras</b>
+            </ion-card-header>
+            <ion-card-content>
+              Valor compras R$ 20,00.<br/>              
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card color="warning">
+            <ion-card-header>
+             <b> Frete / Entrega</b>
+            </ion-card-header>
+            <ion-card-content>
+              <b>Valor Frete R$ 8,00.</b><br/>              
+              Av.Dr Silas Munguba 835 103 BlB
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card color="dark">
+            <ion-card-header>
+             <b> Pedido (Compras + Frete)</b>
+            </ion-card-header>
+            <ion-card-content>             
+              <b>Total Pedido R$ 28,00.</b>
+            </ion-card-content>
+          </ion-card>          
+
+          <ion-card color="light">
+            <ion-card-header>
+              <b>Selcione a Forma de Pagamento</b>
+            </ion-card-header>
+            <ion-card-content>
+
+              <ion-select [(ngModel)]="tpPagamento" label-placement="floating" fill="outline">
+                <ion-select-option value="1">Cartão de credito </ion-select-option>
+                <ion-select-option value="2">Dinheiro</ion-select-option>                
+              </ion-select>
+              
+            </ion-card-content>
+          </ion-card>
+          <br/>
+          <ion-button expand="block" color="medium" (click)="fecharPedido()">Avançar</ion-button>
+          
+        </ion-col>        
+      </ion-row>
+    </ion-grid>
+    
+  </div>
+</ion-content>

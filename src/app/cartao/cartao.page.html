@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Olá, Luiz Carlos</ion-title>       
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> 
+  <div id="container">
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button style="padding-top: 10px; padding-left: 10px;" color="dark">
+            Cartão
+          </ion-button>               
+        </ion-col>      
+        <ion-col>
+          <ion-button shape="circle">
+            <ion-icon slot="icon-only" name="grid-outline"></ion-icon>                   
+          </ion-button>
+          <ion-button shape="circle">
+            <ion-icon slot="icon-only" name="share-social-outline"></ion-icon>                   
+          </ion-button>
+          <ion-button shape="circle">
+            <ion-icon slot="icon-only" name="cart"></ion-icon>       
+            <ion-badge color="danger">2</ion-badge>
+          </ion-button>
+        </ion-col>  
+      </ion-row>
+      <ion-row>
+        <ion-col style="text-align: center;">
+          <br/><br/>
+          <img alt="carta credito" src="assets/image/cartao.jpg" />
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col push-sm="12"><br/>
+          <ion-input
+          label="Informe o NUMERO CARTAO"
+          labelPlacement="stacked"
+          [clearInput]="true"
+          placeholder=""
+          value=""
+          fill="solid"
+          />          
+        </ion-col>        
+      </ion-row>      
+      <ion-row>
+        <ion-col push-sm="12">         
+          <ion-input
+          label="Informe o NOME IMPRESSO"
+          labelPlacement="stacked"
+          [clearInput]="true"
+          placeholder=""
+          value=""
+          fill="solid"
+          />        
+        </ion-col>
+      </ion-row>      
+    
+      <ion-row>
+        <ion-col>         
+          <ion-input
+          label="Informe a VALIDADE"
+          labelPlacement="stacked"
+          [clearInput]="true"
+          placeholder=""
+          value=""
+          fill="solid"
+          />        
+        </ion-col>  
+        <ion-col>         
+          <ion-input
+          label="Informe o DV"
+          labelPlacement="stacked"
+          [clearInput]="true"
+          placeholder=""
+          value=""
+          fill="solid"
+          />                       
+        </ion-col>        
+      </ion-row>  
+      <ion-row>
+        <ion-col><br/><ion-button expand="block" color="dark" (click)="fecharPedido()">Fechar Pedido</ion-button></ion-col>
+      </ion-row>          
+    </ion-grid>        
+    
+  </div>
+</ion-content>

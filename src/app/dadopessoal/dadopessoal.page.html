@@ -1,0 +1,127 @@
+<ion-toolbar color="primary">
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+  <ion-title>Ola, Luiz Carlos</ion-title>
+  <ion-buttons slot="secondary">    
+    <ion-button>
+      <ion-icon slot="icon-only" name="exit"></ion-icon>
+    </ion-button>      
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content [fullscreen]="true"> 
+  <div id="container">
+    
+      <ion-row>
+        <ion-col>
+
+          <ion-button style="padding-top: 10px; padding-left: 10px;" color="dark">
+            Pessoal
+          </ion-button> 
+                    
+        </ion-col>
+        <ion-col>
+          <ion-button shape="circle">
+            <ion-icon slot="icon-only" name="grid-outline"></ion-icon>                   
+          </ion-button>
+          <ion-button shape="circle">
+            <ion-icon slot="icon-only" name="share-social-outline"></ion-icon>                   
+          </ion-button>
+          <ion-button shape="circle">
+            <ion-icon slot="icon-only" name="cart"></ion-icon>       
+            <ion-badge color="danger">2</ion-badge>
+          </ion-button>
+
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <img alt="Silhouette of mountains" src="assets/image/Foto.jpg" />
+        </ion-col>
+      </ion-row>   
+            
+      <ion-row>
+        <ion-col>         
+          <ion-input
+          [(ngModel)]="nome"
+          label="Informe o NOME"
+          labelPlacement="stacked"
+          [clearInput]="true"
+          placeholder=""
+          value=""
+          fill="solid"
+          />        
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>         
+          <ion-input
+          [(ngModel)]="email"
+          label="Informe o EMAIL"
+          labelPlacement="stacked"
+          [clearInput]="true"
+          placeholder=""
+          value=""
+          fill="solid"
+          />        
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>         
+          <ion-input
+          [(ngModel)]="telefone"
+          label="Informe o FONE"
+          labelPlacement="stacked"
+          [clearInput]="true"
+          placeholder=""
+          value=""
+          fill="solid"
+          />        
+        </ion-col>
+        <ion-col>         
+          <ion-input
+          [(ngModel)]="cpf"
+          label="Informe o CPF"
+          labelPlacement="stacked"
+          [clearInput]="true"
+          placeholder=""
+          value=""
+          fill="solid"
+          />          
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><br/>
+          <ion-input
+          [(ngModel)]="senha"
+          label="Informe a SENHA"
+          labelPlacement="stacked"
+          [clearInput]="true"
+          placeholder=""
+          value=""
+          fill="solid"
+          />        
+        </ion-col>
+        <ion-col><br/>         
+          <ion-input
+          [(ngModel)]="redigite"
+          label="Redigite a SENHA"
+          labelPlacement="stacked"
+          [clearInput]="true"
+          placeholder=""
+          value=""
+          fill="solid"
+          />        
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col>
+          <ion-button color="primary" expand="block">Salvar</ion-button> 
+        </ion-col>
+      </ion-row>
+
+  </div>
+</ion-content>
+

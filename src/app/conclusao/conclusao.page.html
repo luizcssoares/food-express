@@ -1,0 +1,51 @@
+<ion-toolbar color="primary">
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+  <ion-title>Ola, </ion-title>
+  <ion-buttons slot="secondary">    
+    <ion-button>
+      <ion-icon slot="icon-only" name="exit"></ion-icon>
+    </ion-button>      
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content [fullscreen]="true"> 
+  <div id="container">    
+    <ion-row>
+
+      <ion-col>
+        <ion-button style="padding-top: 10px; padding-left: 10px;" color="dark">
+          Pedido
+        </ion-button>         
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle">
+          <ion-icon slot="icon-only" name="grid-outline"></ion-icon>                   
+        </ion-button>
+        <ion-button shape="circle">
+          <ion-icon slot="icon-only" name="share-social-outline"></ion-icon>                   
+        </ion-button>
+        <ion-button shape="circle">
+          <ion-icon slot="icon-only" name="cart"></ion-icon>       
+          <ion-badge color="danger">2</ion-badge>
+        </ion-button>
+        <br/><br/><br/><br/>
+      </ion-col>
+    </ion-row>   
+    <ion-row>
+      <ion-col style="text-align: center">          
+        <br/><br/><img alt="Silhouette of mountains" src="assets/image/concluido.png" />
+        <br/><ion-label style="color:black; font-size: 20px;">Pedido 123 efetuado com sucesso.</ion-label>
+        <br/><br/><ion-label style="color:black; font-size: 14px;">Uma copia deste pedido foi enviado para o email abaixo :</ion-label>
+        <br/><ion-label style="color: blue; font-size: 14px;">luizcssoaresgmail.com.br</ion-label>
+      </ion-col>         
+    </ion-row>       
+    <ion-row>
+      <ion-col style="text-align: center">
+
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>            
+

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Olá, João</ion-title>       
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> 
+  <div id="container">
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+
+          <ion-button style="padding-top: 10px; padding-left: 10px;" color="dark">
+            {{descricao}}
+          </ion-button>                 
+          
+        </ion-col>  
+        <ion-col>
+          <ion-button shape="circle">
+            <ion-icon slot="icon-only" name="grid-outline"></ion-icon>                   
+          </ion-button>
+          <ion-button shape="circle">
+            <ion-icon slot="icon-only" name="share-social-outline"></ion-icon>                   
+          </ion-button>
+          <ion-button shape="circle">
+            <ion-icon slot="icon-only" name="cart"></ion-icon>       
+            <ion-badge color="danger">2</ion-badge>
+          </ion-button>
+          <br/><br/>
+        </ion-col>
+
+      </ion-row>
+      <ion-row>
+        <ion-col *ngFor="let produto of listProdCat">    
+
+          <ion-card>
+            <img alt="Silhouette of mountains" src={{produto.image}}  />
+            <ion-card-header>
+              <ion-card-title>{{produto.descricao}}</ion-card-title>
+              <ion-card-subtitle>RS {{produto.preco}}</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content>
+              {{produto.categoria}}
+              <ion-button shape="circle" (click)="editProduto(produto)">
+                <ion-icon slot="icon-only" name="search"></ion-icon>                   
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+          
+        </ion-col>        
+      </ion-row>
+    </ion-grid>
+    
+  </div>
+</ion-content>
